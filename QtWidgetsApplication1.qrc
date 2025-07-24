@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="QtWidgetsApplication1">
+        <file>icons/eye.png</file>
+        <file>icons/brightness.png</file>
+        <file>icons/temperature.png</file>
+        <file>icons/timer.png</file>
+    </qresource>
+</RCC>

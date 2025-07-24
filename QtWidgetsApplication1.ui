@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UI version="4.0" >
+ <class>QtWidgetsApplication1Class</class>
+ <widget class="QMainWindow" name="QtWidgetsApplication1Class" >
+  <property name="objectName" >
+   <string notr="true">EyeCareApp</string>
+  </property>
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle" >
+   <string>EyeCare</string>
+  </property>
+  <property name="styleSheet">
+   <string>
+    QMainWindow {
+      background-color: #f5f5f7;
+    }
+    QLabel#titleLabel {
+      font-family: "SF Pro Display", "Segoe UI", sans-serif;
+      font-size: 28px;
+      font-weight: bold;
+      color: #1d1d1f;
+    }
+    QLabel#subtitleLabel {
+      font-family: "SF Pro Text", "Segoe UI", sans-serif;
+      font-size: 16px;
+      color: #86868b;
+    }
+    QPushButton#actionButton {
+      background-color: #0071e3;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      font-family: "SF Pro Text", "Segoe UI", sans-serif;
+      font-size: 15px;
+      font-weight: medium;
+      padding: 10px 20px;
+      min-width: 160px;
+      min-height: 40px;
+    }
+    QPushButton#actionButton:hover {
+      background-color: #0077ed;
+    }
+    QPushButton#actionButton:pressed {
+      background-color: #0068d1;
+    }
+    QSlider::groove:horizontal {
+      border: none;
+      height: 6px;
+      background: #d2d2d7;
+      border-radius: 3px;
+    }
+    QSlider::handle:horizontal {
+      background: #0071e3;
+      border: none;
+      width: 18px;
+      height: 18px;
+      margin: -6px 0;
+      border-radius: 9px;
+    }
+    QSlider::sub-page:horizontal {
+      background: #0071e3;
+      border-radius: 3px;
+    }
+    QComboBox {
+      border: 1px solid #d2d2d7;
+      border-radius: 6px;
+      padding: 6px 12px;
+      background-color: white;
+      min-height: 30px;
+    }
+    QComboBox::drop-down {
+      border: none;
+    }
+    QGroupBox {
+      font-family: "SF Pro Text", "Segoe UI", sans-serif;
+      font-size: 16px;
+      font-weight: medium;
+      color: #1d1d1f;
+      border: none;
+      margin-top: 16px;
+    }
+    QGroupBox::title {
+      subcontrol-origin: margin;
+      left: 8px;
+      padding: 0 5px;
+    }
+   </string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>20</number>
+    </property>
+    <property name="leftMargin">
+     <number>40</number>
+    </property>
+    <property name="topMargin">
+     <number>40</number>
+    </property>
+    <property name="rightMargin">
+     <number>40</number>
+    </property>
+    <property name="bottomMargin">
+     <number>40</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="titleLabel">
+      <property name="text">
+       <string>EyeCare</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="subtitleLabel">
+      <property name="text">
+       <string>Protect your eyes with intelligent screen adjustments</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>30</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="blueFilterGroup">
+      <property name="title">
+       <string>Blue Light Filter</string>
+      </property>
+      <layout class="QVBoxLayout" name="blueFilterLayout">
+       <item>
+        <layout class="QHBoxLayout" name="blueFilterControlLayout">
+         <item>
+          <widget class="QLabel" name="blueFilterLabel">
+           <property name="text">
+            <string>Intensity</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="blueFilterSlider">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>30</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="blueFilterValueLabel">
+           <property name="text">
+            <string>30%</string>
+           </property>
+           <property name="minimumWidth">
+            <number>40</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="brightnessGroup">
+      <property name="title">
+       <string>Screen Brightness</string>
+      </property>
+      <layout class="QVBoxLayout" name="brightnessLayout">
+       <item>
+        <layout class="QHBoxLayout" name="brightnessControlLayout">
+         <item>
+          <widget class="QLabel" name="brightnessLabel">
+           <property name="text">
+            <string>Level</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="brightnessSlider">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="minimum">
+            <number>10</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>70</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="brightnessValueLabel">
+           <property name="text">
+            <string>70%</string>
+           </property>
+           <property name="minimumWidth">
+            <number>40</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="modeGroup">
+      <property name="title">
+       <string>Color Temperature</string>
+      </property>
+      <layout class="QVBoxLayout" name="modeLayout">
+       <item>
+        <layout class="QHBoxLayout" name="modeControlLayout">
+         <item>
+          <widget class="QLabel" name="modeLabel">
+           <property name="text">
+            <string>Mode</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="modeComboBox">
+           <item>
+            <property name="text">
+             <string>Auto (Based on time)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Warm (Evening)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Cool (Daytime)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Custom</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="temperatureControlLayout">
+         <item>
+          <widget class="QLabel" name="temperatureLabel">
+           <property name="text">
+            <string>Temperature</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="temperatureSlider">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>50</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="temperatureValueLabel">
+           <property name="text">
+            <string>50%</string>
+           </property>
+           <property name="minimumWidth">
+            <number>40</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="reminderGroup">
+      <property name="title">
+       <string>Eye Break Reminders</string>
+      </property>
+      <layout class="QVBoxLayout" name="reminderLayout">
+       <item>
+        <layout class="QHBoxLayout" name="reminderControlLayout">
+         <item>
+          <widget class="QCheckBox" name="reminderCheckBox">
+           <property name="text">
+            <string>Enable 20-20-20 rule reminders</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QComboBox" name="reminderIntervalComboBox">
+           <item>
+            <property name="text">
+             <string>Every 20 minutes</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Every 30 minutes</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Every 60 minutes</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="buttonLayout">
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="actionButton">
+        <property name="text">
+         <string>Apply Settings</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar" />
+ </widget>
+ <layoutDefault spacing="6" margin="11" />
+ <resources>
+   <include location="QtWidgetsApplication1.qrc"/>
+ </resources>
+ <connections/>
+</UI>
