@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>841</width>
+    <height>712</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -254,12 +254,12 @@
           <widget class="QComboBox" name="modeComboBox">
            <item>
             <property name="text">
-             <string>自动（基于时间）</string>
+             <string>自动（根据时间调整）</string>
             </property>
            </item>
            <item>
             <property name="text">
-             <string>暖色调 （夜间）</string>
+             <string>暖色调（夜间）</string>
             </property>
            </item>
            <item>
@@ -348,17 +348,17 @@
           <widget class="QComboBox" name="reminderIntervalComboBox">
            <item>
             <property name="text">
-             <string>Every 20 minutes</string>
+             <string>每20分钟</string>
             </property>
            </item>
            <item>
             <property name="text">
-             <string>Every 30 minutes</string>
+             <string>每30分钟</string>
             </property>
            </item>
            <item>
             <property name="text">
-             <string>Every 60 minutes</string>
+             <string>每60分钟</string>
             </property>
            </item>
           </widget>

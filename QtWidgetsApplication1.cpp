@@ -3,7 +3,7 @@
 #include <QScreen>
 #include <QDesktopServices>
 #include <QUrl>
-#include <QDesktopWidget>
+//#include <QDesktopWidget>
 #include <QApplication>
 #include <QShowEvent>
 
@@ -326,8 +326,8 @@ void QtWidgetsApplication1::onActionButtonClicked()
     }
     
     QMessageBox::information(this, 
-        tr("Settings Applied"), 
-        tr("Your eye protection settings have been applied successfully."));
+        tr(""), //这里我感觉不用写别的标题也挺好
+        tr("设置成功！"));
 }
 
 void QtWidgetsApplication1::showEyeBreakReminder()

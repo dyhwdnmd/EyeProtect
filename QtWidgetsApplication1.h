@@ -40,7 +40,7 @@ private slots:
     void startInitialAnimations();
 
 private:
-    Ui::QtWidgetsApplication1Class ui;
+    Ui::EyeCareApp ui;
     QTimer *reminderTimer;
     QSystemTrayIcon *trayIcon;
     QMenu *trayIconMenu;
