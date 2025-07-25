@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<UI version="4.0" >
- <class>QtWidgetsApplication1Class</class>
- <widget class="QMainWindow" name="QtWidgetsApplication1Class" >
-  <property name="objectName" >
-   <string notr="true">EyeCareApp</string>
-  </property>
-  <property name="geometry" >
+<ui version="4.0">
+ <class>EyeCareApp</class>
+ <widget class="QMainWindow" name="EyeCareApp">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -19,7 +16,7 @@
     <height>600</height>
    </size>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>EyeCare</string>
   </property>
   <property name="styleSheet">
@@ -28,13 +25,13 @@
       background-color: #f5f5f7;
     }
     QLabel#titleLabel {
-      font-family: "SF Pro Display", "Segoe UI", sans-serif;
+      font-family: &quot;SF Pro Display&quot;, &quot;Segoe UI&quot;, sans-serif;
       font-size: 28px;
       font-weight: bold;
       color: #1d1d1f;
     }
     QLabel#subtitleLabel {
-      font-family: "SF Pro Text", "Segoe UI", sans-serif;
+      font-family: &quot;SF Pro Text&quot;, &quot;Segoe UI&quot;, sans-serif;
       font-size: 16px;
       color: #86868b;
     }
@@ -43,7 +40,7 @@
       color: white;
       border: none;
       border-radius: 20px;
-      font-family: "SF Pro Text", "Segoe UI", sans-serif;
+      font-family: &quot;SF Pro Text&quot;, &quot;Segoe UI&quot;, sans-serif;
       font-size: 15px;
       font-weight: medium;
       padding: 10px 20px;
@@ -85,7 +82,7 @@
       border: none;
     }
     QGroupBox {
-      font-family: "SF Pro Text", "Segoe UI", sans-serif;
+      font-family: &quot;SF Pro Text&quot;, &quot;Segoe UI&quot;, sans-serif;
       font-size: 16px;
       font-weight: medium;
       color: #1d1d1f;
@@ -122,27 +119,27 @@
        <string>EyeCare</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QLabel" name="subtitleLabel">
       <property name="text">
-       <string>Protect your eyes with intelligent screen adjustments</string>
+       <string>智能调节屏幕，护眼更轻松。</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
     </item>
     <item>
      <spacer name="verticalSpacer">
       <property name="orientation">
-       <enum>Qt::Vertical</enum>
+       <enum>Qt::Orientation::Vertical</enum>
       </property>
       <property name="sizeType">
-       <enum>QSizePolicy::Fixed</enum>
+       <enum>QSizePolicy::Policy::Fixed</enum>
       </property>
       <property name="sizeHint" stdset="0">
        <size>
@@ -155,7 +152,7 @@
     <item>
      <widget class="QGroupBox" name="blueFilterGroup">
       <property name="title">
-       <string>Blue Light Filter</string>
+       <string>蓝光过滤</string>
       </property>
       <layout class="QVBoxLayout" name="blueFilterLayout">
        <item>
@@ -163,15 +160,12 @@
          <item>
           <widget class="QLabel" name="blueFilterLabel">
            <property name="text">
-            <string>Intensity</string>
+            <string>强度</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QSlider" name="blueFilterSlider">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
            <property name="minimum">
             <number>0</number>
            </property>
@@ -181,15 +175,15 @@
            <property name="value">
             <number>30</number>
            </property>
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
           </widget>
          </item>
          <item>
           <widget class="QLabel" name="blueFilterValueLabel">
            <property name="text">
             <string>30%</string>
-           </property>
-           <property name="minimumWidth">
-            <number>40</number>
            </property>
           </widget>
          </item>
@@ -201,7 +195,7 @@
     <item>
      <widget class="QGroupBox" name="brightnessGroup">
       <property name="title">
-       <string>Screen Brightness</string>
+       <string>屏幕亮度</string>
       </property>
       <layout class="QVBoxLayout" name="brightnessLayout">
        <item>
@@ -209,15 +203,12 @@
          <item>
           <widget class="QLabel" name="brightnessLabel">
            <property name="text">
-            <string>Level</string>
+            <string>等级</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QSlider" name="brightnessSlider">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
            <property name="minimum">
             <number>10</number>
            </property>
@@ -227,15 +218,15 @@
            <property name="value">
             <number>70</number>
            </property>
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
           </widget>
          </item>
          <item>
           <widget class="QLabel" name="brightnessValueLabel">
            <property name="text">
             <string>70%</string>
-           </property>
-           <property name="minimumWidth">
-            <number>40</number>
            </property>
           </widget>
          </item>
@@ -247,7 +238,7 @@
     <item>
      <widget class="QGroupBox" name="modeGroup">
       <property name="title">
-       <string>Color Temperature</string>
+       <string>色温</string>
       </property>
       <layout class="QVBoxLayout" name="modeLayout">
        <item>
@@ -255,7 +246,7 @@
          <item>
           <widget class="QLabel" name="modeLabel">
            <property name="text">
-            <string>Mode</string>
+            <string>模式</string>
            </property>
           </widget>
          </item>
@@ -263,22 +254,22 @@
           <widget class="QComboBox" name="modeComboBox">
            <item>
             <property name="text">
-             <string>Auto (Based on time)</string>
+             <string>自动（基于时间）</string>
             </property>
            </item>
            <item>
             <property name="text">
-             <string>Warm (Evening)</string>
+             <string>暖色调 （夜间）</string>
             </property>
            </item>
            <item>
             <property name="text">
-             <string>Cool (Daytime)</string>
+             <string>冷色调（日间）</string>
             </property>
            </item>
            <item>
             <property name="text">
-             <string>Custom</string>
+             <string>自定义</string>
             </property>
            </item>
           </widget>
@@ -290,15 +281,12 @@
          <item>
           <widget class="QLabel" name="temperatureLabel">
            <property name="text">
-            <string>Temperature</string>
+            <string>温度</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QSlider" name="temperatureSlider">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
            <property name="minimum">
             <number>0</number>
            </property>
@@ -308,15 +296,15 @@
            <property name="value">
             <number>50</number>
            </property>
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
           </widget>
          </item>
          <item>
           <widget class="QLabel" name="temperatureValueLabel">
            <property name="text">
             <string>50%</string>
-           </property>
-           <property name="minimumWidth">
-            <number>40</number>
            </property>
           </widget>
          </item>
@@ -328,7 +316,7 @@
     <item>
      <widget class="QGroupBox" name="reminderGroup">
       <property name="title">
-       <string>Eye Break Reminders</string>
+       <string>眼部放松提醒</string>
       </property>
       <layout class="QVBoxLayout" name="reminderLayout">
        <item>
@@ -336,7 +324,7 @@
          <item>
           <widget class="QCheckBox" name="reminderCheckBox">
            <property name="text">
-            <string>Enable 20-20-20 rule reminders</string>
+            <string>开启护眼提醒（20-20-20）</string>
            </property>
            <property name="checked">
             <bool>true</bool>
@@ -346,7 +334,7 @@
          <item>
           <spacer name="horizontalSpacer">
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Orientation::Horizontal</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -383,7 +371,7 @@
     <item>
      <spacer name="verticalSpacer_2">
       <property name="orientation">
-       <enum>Qt::Vertical</enum>
+       <enum>Qt::Orientation::Vertical</enum>
       </property>
       <property name="sizeHint" stdset="0">
        <size>
@@ -398,7 +386,7 @@
       <item>
        <spacer name="horizontalSpacer_2">
         <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+         <enum>Qt::Orientation::Horizontal</enum>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
@@ -411,14 +399,14 @@
       <item>
        <widget class="QPushButton" name="actionButton">
         <property name="text">
-         <string>Apply Settings</string>
+         <string>保存并应用设置</string>
         </property>
        </widget>
       </item>
       <item>
        <spacer name="horizontalSpacer_3">
         <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+         <enum>Qt::Orientation::Horizontal</enum>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
@@ -432,11 +420,11 @@
     </item>
    </layout>
   </widget>
-  <widget class="QStatusBar" name="statusBar" />
+  <widget class="QStatusBar" name="statusBar"/>
  </widget>
- <layoutDefault spacing="6" margin="11" />
+ <layoutdefault spacing="6" margin="11"/>
  <resources>
-   <include location="QtWidgetsApplication1.qrc"/>
+  <include location="QtWidgetsApplication1.qrc"/>
  </resources>
  <connections/>
-</UI>
+</ui>
